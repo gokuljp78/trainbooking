@@ -1,0 +1,88 @@
+class base:
+    def __init__(self):
+        self.d = {}
+        print("HELLO USER")
+
+        
+    def inputtt(self):
+        i=True
+        while i==True:
+            
+            ii=input("do u want to add car model:")
+
+            
+            if ii=="y": 
+                a=input("enter car brand name:")
+                b=input("enter car model name:")
+                self.d[a]=b
+                print("<--- SUCCESSFULLY ADDED --->")
+                i=True
+            else:
+                i=False
+
+                
+
+    def second(self):
+        
+        d=self.d
+        count=1
+        ind=list(d)
+        for k,v in d.items():
+            
+            print(count,k,v)
+            count+=1
+
+        st11,stt1=input("enter name of car brand and model:").split()
+        print(st11,stt1)
+        key= [key for key, val in self.d.items() if val == stt1]
+        if self.d[st11]==stt1:
+            print(f"SELECTED CAR BRAND NAME{key[0]}")
+            
+    
+            q=False
+            a=True
+            while a:
+                print(f"enter start to start the {key[0]} car")
+                print(f"enter stop to stop {key[0]} car")
+                print("terminate to terminate:")
+                a=input("enter your chooes:")
+                if a=="start":
+                    if q:
+                        print(f"ur {key[0]} car already started\n")
+            
+                    else:
+                        q=True
+                        print(f"ur {key[0]} car started\n")
+        
+
+                elif a=="stop":
+                    if q:
+                        print(f"ur {key[0]} car stoped\ \n")
+                        q=False
+                    else:
+                        print(f"ur {key[0]} car already stoped\n")
+
+                elif a=="terminate":
+        
+                    print("terminated")
+                    print("HAVE A NICE DAY ")
+                    break
+        
+        else:
+            print("!! SOMETHING WENT WRONG !!\n  PLEASE CHECK THE INPUT U ENTERD")
+        
+        
+
+
+
+
+
+        
+o=base()
+o.inputtt()
+o.second()
+            
+
+            
+        
+        
